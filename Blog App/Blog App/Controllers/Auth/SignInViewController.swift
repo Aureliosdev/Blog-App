@@ -11,7 +11,8 @@ class SignInViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .systemBackground
+        title = " Sign In"
         
     }
     

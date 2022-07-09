@@ -10,6 +10,14 @@ import UIKit
 class PayWallViewController: UIViewController {
 
     //Header image
+    private let headerImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(systemName: "crown.fill"))
+        imageView.tintColor = .white
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+        
+        
+    }()
     //Call to Action button, subscribe etc.
     //  Pricing and product info
     //Terms of services

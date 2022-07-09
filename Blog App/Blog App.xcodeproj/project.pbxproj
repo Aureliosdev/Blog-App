@@ -54,6 +54,7 @@
 		D3344471287083EA00EBA31A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		D33444732870840E00EBA31A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		D3DCC7D62871732E002CCD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3E631B42879D76700606D29 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D301CACA2877390A004E4688 /* CreateNewPostViewController.swift */,
+				D3E631B42879D76700606D29 /* Configuration.storekit */,
 				D301CACC28773927004E4688 /* ViewPostViewController.swift */,
 			);
 			path = Posts;

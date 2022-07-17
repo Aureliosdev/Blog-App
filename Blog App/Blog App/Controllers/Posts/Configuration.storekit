@@ -41,7 +41,7 @@
               "locale" : "en_GB"
             }
           ],
-          "productID" : "com.abylay.BlogApp.premiumx",
+          "productID" : "com.abylay.BlogApp.premium",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Premium monthly",
           "subscriptionGroupID" : "B5494F81",

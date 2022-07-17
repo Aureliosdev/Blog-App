@@ -74,7 +74,7 @@ class PayWallViewController: UIViewController {
         view.addSubview(restoreButton)
         view.addSubview(termsView)
         view.addSubview(heroView)
-        heroView.backgroundColor = .systemYellow
+        heroView.backgroundColor = .systemBackground
         setupCloseButton()
         setUpButtons()
         view.backgroundColor = .systemBackground
@@ -104,7 +104,7 @@ class PayWallViewController: UIViewController {
         header.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.width, height: view.height / 3.2)
         termsView.frame = CGRect(x: 10, y: view.height-100, width: view.width-20, height: 100)
         restoreButton.frame = CGRect(x: 25, y: termsView.top-70, width: view.width-50, height: 48)
-        buyButton.frame = CGRect(x: 25, y: restoreButton.top-60, width: view.width-50, height: 48)
+        buyButton.frame = CGRect(x: 25, y: restoreButton.top-70, width: view.width-50, height: 48)
         heroView.frame = CGRect(x: 0, y: header.bottom, width: view.width, height: buyButton.top - view.safeAreaInsets.top - header.height)
     }
 

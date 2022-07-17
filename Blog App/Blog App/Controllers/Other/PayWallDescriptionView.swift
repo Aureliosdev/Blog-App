@@ -12,8 +12,8 @@ class PayWallDescriptionView: UIView {
     private let descriptorLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 22, weight: .medium)
-        label.text = "Join Blog App Premium to read unlimited articles!"
+        label.font = UIFont(name: "Palatino", size: 26)
+        label.text = "Join for Blog to read unlimited articles!"
         label.numberOfLines = 0
         
         return label
@@ -23,7 +23,7 @@ class PayWallDescriptionView: UIView {
     private let priceLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 18, weight: .thin)
+        label.font = .systemFont(ofSize: 22, weight: .thin)
         label.text = "$4.99 / month "
         label.numberOfLines = 1
         return label

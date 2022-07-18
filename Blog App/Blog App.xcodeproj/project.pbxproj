@@ -19,7 +19,7 @@
 		D3184C0428735636009F046B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3184C0328735636009F046B /* User.swift */; };
 		D3184C0628735640009F046B /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3184C0528735640009F046B /* BlogPost.swift */; };
 		D328E5872885D28100C48E23 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = D328E5862885D28100C48E23 /* StoreKitTestCertificate.cer */; };
-		D328E5892885D5D600C48E23 /* PayWallHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328E5882885D5D600C48E23 /* PayWallHeaderView.swift */; };
+		D328E5892885D5D600C48E23 /* PayWallHeaderVie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328E5882885D5D600C48E23 /* PayWallHeaderVie.swift */; };
 		D334444C2870638500EBA31A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334444B2870638500EBA31A /* AppDelegate.swift */; };
 		D334444E2870638500EBA31A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334444D2870638500EBA31A /* SceneDelegate.swift */; };
 		D33444552870638600EBA31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33444542870638600EBA31A /* Assets.xcassets */; };
@@ -49,7 +49,7 @@
 		D3184C0328735636009F046B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D3184C0528735640009F046B /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
 		D328E5862885D28100C48E23 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
-		D328E5882885D5D600C48E23 /* PayWallHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallHeaderView.swift; sourceTree = "<group>"; };
+		D328E5882885D5D600C48E23 /* PayWallHeaderVie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallHeaderVie.swift; sourceTree = "<group>"; };
 		D33444482870638500EBA31A /* Blog App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blog App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D334444B2870638500EBA31A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D334444D2870638500EBA31A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		D301CACE28773942004E4688 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				D328E5882885D5D600C48E23 /* PayWallHeaderView.swift */,
+				D328E5882885D5D600C48E23 /* PayWallHeaderVie.swift */,
 				D301CACF28773972004E4688 /* PayWallViewController.swift */,
 				D33CF7CD28806D6A00411DBF /* PayWallDescriptionView.swift */,
 				D3A4B422287BEE0C009CB3C6 /* Extensions.swift */,
@@ -335,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D328E5892885D5D600C48E23 /* PayWallHeaderView.swift in Sources */,
+				D328E5892885D5D600C48E23 /* PayWallHeaderVie.swift in Sources */,
 				D3184C0628735640009F046B /* BlogPost.swift in Sources */,
 				D33CF7CE28806D6A00411DBF /* PayWallDescriptionView.swift in Sources */,
 				D3A4B423287BEE0C009CB3C6 /* Extensions.swift in Sources */,

@@ -12,7 +12,7 @@ class PayWallViewController: UIViewController {
  
     
     
-    private let header = PayWallHeaderView()
+    private let header = PayWallHeaderVie()
     private let heroView = PayWallDescriptionView()
     //Header image
     private let headerImageView: UIImageView = {

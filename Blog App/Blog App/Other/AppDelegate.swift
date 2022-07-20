@@ -17,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         Purchases.configure(withAPIKey: "appl_uKGlHGzcgiDtzSovnEkBphgmRAw")
+        IAPManager.shared.getSubscriptionStatus(completion: nil)
+        IAPManager.shared.fetchPackages { package in
+            guard let package = package else { return }
+            print("Got Package! ")
+            IAPManager.shared.subscribe(package: package) { success in
+                print("Success \(success)")
+            }
+                
+            
+        }
         return true
         
     }

@@ -20,6 +20,7 @@
 		D3184C0628735640009F046B /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3184C0528735640009F046B /* BlogPost.swift */; };
 		D328E5872885D28100C48E23 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = D328E5862885D28100C48E23 /* StoreKitTestCertificate.cer */; };
 		D328E5892885D5D600C48E23 /* PayWallHeaderVie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328E5882885D5D600C48E23 /* PayWallHeaderVie.swift */; };
+		D328E58B2889396300C48E23 /* SignInHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D328E58A2889396300C48E23 /* SignInHeaderView.swift */; };
 		D334444C2870638500EBA31A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334444B2870638500EBA31A /* AppDelegate.swift */; };
 		D334444E2870638500EBA31A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334444D2870638500EBA31A /* SceneDelegate.swift */; };
 		D33444552870638600EBA31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33444542870638600EBA31A /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		D3184C0528735640009F046B /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
 		D328E5862885D28100C48E23 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		D328E5882885D5D600C48E23 /* PayWallHeaderVie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallHeaderVie.swift; sourceTree = "<group>"; };
+		D328E58A2889396300C48E23 /* SignInHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHeaderView.swift; sourceTree = "<group>"; };
 		D33444482870638500EBA31A /* Blog App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blog App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D334444B2870638500EBA31A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D334444D2870638500EBA31A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				D3A4B420287BE86A009CB3C6 /* PayWallHeaderView.swift */,
+				D328E58A2889396300C48E23 /* SignInHeaderView.swift */,
 				D33444562870638600EBA31A /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -348,6 +351,7 @@
 				D3344470287083D200EBA31A /* DataBaseManager.swift in Sources */,
 				D301CAC7287735EF004E4688 /* ProfileViewController.swift in Sources */,
 				D301CAC12877358B004E4688 /* SignInViewController.swift in Sources */,
+				D328E58B2889396300C48E23 /* SignInHeaderView.swift in Sources */,
 				D301CACB2877390A004E4688 /* CreateNewPostViewController.swift in Sources */,
 				D301CAC5287735E3004E4688 /* HomeViewController.swift in Sources */,
 				D301CACD28773927004E4688 /* ViewPostViewController.swift in Sources */,

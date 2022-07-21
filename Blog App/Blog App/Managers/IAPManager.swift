@@ -92,13 +92,15 @@ final class IAPManager {
             guard let entitlements = info?.entitlements,
                   error == nil else { return }
             if entitlements.all["Premium"]?.isActive == true {
+                print("purchased")
                 UserDefaults.standard.set(true, forKey: "premium")
                 completion(true)
-                print("purchased")
+               
             }else {
+                print("purchase failed")
                 UserDefaults.standard.set(false , forKey: "premium")
                 completion(false)
-                print("purchase falied")
+               
             }
         }
         

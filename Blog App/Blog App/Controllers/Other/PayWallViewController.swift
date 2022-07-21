@@ -92,13 +92,42 @@ class PayWallViewController: UIViewController {
     }
     
     @objc private func didTapSubscribe() {
+        IAPManager.shared.fetchPackages { package in
+            guard let package  = package else { return }
+            IAPManager.shared.subscribe(package: package) { [weak self] success in
+                print("Purchase\(success)")
+                DispatchQueue.main.async {
+                    if success {
+                        self?.dismiss(animated: true,completion: nil)
+                    }else {
+                        
+                        let alert = UIAlertController(title: "Subscription failed", message: "We were unable to complete the transaction", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
+                        self?.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
         //Revenue cat
         
     }
     @objc private func didTapRestore() {
-        //Revenue cat
-            
-    }
+        IAPManager.shared.restorePurchases { [weak self ] success in
+                print("Restored \(success)")
+                DispatchQueue.main.async {
+                    if success {
+                        self?.dismiss(animated: true,completion: nil)
+                    }else {
+                        
+                        let alert = UIAlertController(title: "Restortion failed", message: "We were unable to restore previous transaction", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
+                        self?.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
+                    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         header.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.width, height: view.height / 3.2)

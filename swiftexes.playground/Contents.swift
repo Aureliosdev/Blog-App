@@ -44,3 +44,47 @@ func removeChar(str1: String, n1: Int) -> String {
 }
 print(removeChar(str1: "Hello", n1: 3))
  
+
+func ReplaceChar(char: String) -> String {
+    if char.isEmpty { return ""}
+    var newChar = char
+    let last = newChar.remove(at: newChar.startIndex)
+    let first = newChar.remove(at: newChar.index(before: newChar.endIndex))
+    
+    newChar.append(last)
+    newChar.insert(first, at: newChar.startIndex)
+    return newChar
+}
+ReplaceChar(char: "MOTHER")
+
+func multipleOf(num1: Int) -> Bool {
+    
+    if num1.isMultiple(of: 3) {
+        return true
+    }
+//    else if num2.isMultiple(of: 5) {
+//        return true
+//    }
+    return false
+}
+multipleOf(num1: 9)
+
+func multipleOf2(num1: Int) -> Bool {
+    if num1 % 3 == 0 || num1 % 5 == 0 {
+        return true
+    }
+    
+return false
+    
+}
+multipleOf2(num1: 55)
+
+func returniNgIs(str1: String) -> Bool {
+    if str1.hasPrefix("Is") {
+        return true
+    }
+    return false
+    
+}
+returniNgIs(str1: "Is smail")
+returniNgIs(str1: "ismaga")

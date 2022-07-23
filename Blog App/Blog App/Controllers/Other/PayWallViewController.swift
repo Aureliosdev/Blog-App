@@ -119,7 +119,7 @@ class PayWallViewController: UIViewController {
                         self?.dismiss(animated: true,completion: nil)
                     }else {
                         
-                        let alert = UIAlertController(title: "Restortion failed", message: "We were unable to restore previous transaction", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "Restoration failed", message: "We were unable to restore previous transaction", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
                         self?.present(alert, animated: true, completion: nil)
                     }

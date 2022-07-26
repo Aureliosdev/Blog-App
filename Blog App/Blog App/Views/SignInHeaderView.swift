@@ -13,7 +13,7 @@ class SignInHeaderView: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .secondarySystemBackground
-        imageView.image = UIImage(named: "authImage")
+        imageView.image = UIImage(named: "newyork")
     
         return imageView
         
@@ -45,5 +45,6 @@ class SignInHeaderView: UIView {
         let size: CGFloat = width/4
         imageView.frame = CGRect(x: (width-size)/2, y: 10, width: size, height: size)
         label.frame =   CGRect(x: 20, y: imageView.bottom+10, width: width-40, height: height-size-30)
+        
 }
 }

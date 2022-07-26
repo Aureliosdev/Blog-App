@@ -26,6 +26,12 @@ final class DataBaseManager {
         
     }
     public func insert(user: User,completion: @escaping (Bool) -> Void) {
-        
+        database
+            .collection("users")
+            .document("")
+            .setData([:])  { error  in
+                completion(error == nil)
+            
+            }
     }
 }

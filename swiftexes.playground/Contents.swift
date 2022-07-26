@@ -77,6 +77,7 @@ func multipleOf2(num1: Int) -> Bool {
 return false
     
 }
+
 multipleOf2(num1: 55)
 
 func returniNgIs(str1: String) -> Bool {
@@ -88,3 +89,14 @@ func returniNgIs(str1: String) -> Bool {
 }
 returniNgIs(str1: "Is smail")
 returniNgIs(str1: "ismaga")
+
+
+func removeLastChar(_ string1: String) -> String {
+    
+    var newString = string1
+    let newChar = newString.removeLast()
+    let newStr = String(newChar)
+    
+    return newStr + string1 + newStr
+}
+removeLastChar("Hello")

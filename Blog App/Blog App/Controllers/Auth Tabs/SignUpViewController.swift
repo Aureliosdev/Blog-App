@@ -129,7 +129,7 @@ class SignUpViewController: UITabBarController {
         }
         
         //Update Database
-        
+        var new datar = Data
     }
    
     

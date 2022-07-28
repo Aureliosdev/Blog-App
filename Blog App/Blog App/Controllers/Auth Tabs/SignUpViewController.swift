@@ -32,6 +32,8 @@ class SignUpViewController: UITabBarController {
         let emailTextField = UITextField()
         emailTextField.keyboardType = .emailAddress
         emailTextField.placeholder = "Email Adress"
+        emailTextField.autocapitalizationType = .none
+        emailTextField.autocorrectionType = .no
         emailTextField.backgroundColor = .secondarySystemBackground
         emailTextField.leftViewMode = .always
         emailTextField.layer.cornerRadius = 8
@@ -47,6 +49,8 @@ class SignUpViewController: UITabBarController {
         passwordField.keyboardType = .emailAddress
         passwordField.placeholder = "Password"
         passwordField.backgroundColor = .secondarySystemBackground
+        passwordField.autocorrectionType = .no
+        passwordField.autocapitalizationType = .none
         passwordField.leftViewMode = .always
         passwordField.isSecureTextEntry = true
         passwordField.layer.cornerRadius = 8
@@ -129,7 +133,7 @@ class SignUpViewController: UITabBarController {
         }
         
         //Update Database
-        var new datar = Data
+    
     }
    
     

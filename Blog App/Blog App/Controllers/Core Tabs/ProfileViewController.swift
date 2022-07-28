@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
            }
            
     @objc private func didTapSignOut() {
-               
+        AuthManager.shared.
     }
            
     

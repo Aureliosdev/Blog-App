@@ -19,6 +19,8 @@ class SignInViewController: UITabBarController {
         emailTextField.keyboardType = .emailAddress
         emailTextField.placeholder = "Email Adress"
         emailTextField.backgroundColor = .secondarySystemBackground
+        emailTextField.autocorrectionType = .no
+        emailTextField.autocapitalizationType = .none
         emailTextField.leftViewMode = .always
         emailTextField.layer.cornerRadius = 8
         emailTextField.layer.masksToBounds = true
@@ -33,6 +35,8 @@ class SignInViewController: UITabBarController {
         passwordField.keyboardType = .emailAddress
         passwordField.placeholder = "Password"
         passwordField.backgroundColor = .secondarySystemBackground
+        passwordField.autocorrectionType = .no
+        passwordField.autocapitalizationType = .none
         passwordField.leftViewMode = .always
         passwordField.isSecureTextEntry = true
         passwordField.layer.cornerRadius = 8

@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-       
+        
         let vc: UIViewController
         if AuthManager.shared.isSignedIn {
             vc = TabBarController()
@@ -26,13 +26,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let NavVc = UINavigationController(rootViewController: SignInVC)
             NavVc.navigationBar.prefersLargeTitles = true
             vc = NavVc
-            
         }
         window.rootViewController = vc
         window.makeKeyAndVisible()
         self.window = window
         
-      
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

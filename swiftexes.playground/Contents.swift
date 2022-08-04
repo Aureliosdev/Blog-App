@@ -100,3 +100,26 @@ func removeLastChar(_ string1: String) -> String {
     return newStr + string1 + newStr
 }
 removeLastChar("Hello")
+let contact =
+    ["address":
+        [
+            "zipcode": "12345",
+            "street": "broadway",
+            "city": "wichita"
+]
+]
+func capitalizedAndTrimmed(_ string: String) -> String {
+    return string.trimmingCharacters(in: .whitespaces).capitalized
+}
+
+var capitalizedStreet: String? = nil
+var capitalizedCity: String? = nil
+if let address = contact["address"] {
+    if let street = address["street"] {
+        capitalizedStreet = capitalizedAndTrimmed(street.capitalized)
+    }
+    if let city = address["city"] {
+        capitalizedCity = capitalizedAndTrimmed(city.capitalized)
+    }
+}
+

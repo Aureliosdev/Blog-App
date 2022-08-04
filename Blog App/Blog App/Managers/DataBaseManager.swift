@@ -44,4 +44,26 @@ final class DataBaseManager {
             
             }
     }
+
+    public func getUser(email: String, completion: @escaping (User?)-> Void) {
+        let documentID = email
+            .replacingOccurrences(of: ".", with: "_")
+            .replacingOccurrences(of: "@", with: "_")
+        
+        database
+        
+            .collection("users")
+            .document(documentID)
+            .getDocument { snapshot , error in
+                guard let data = snapshot?.data() as? [String : String],
+                      let name = data["name"],
+                        error == nil else { return }
+                var url: URL?
+                if let urlString = data["profile_photo"] {
+                  url = URL(string: urlString)
+                }
+               let user = User(name: name, email: email, profilePictureURL: url)
+                completion(user)
+            }
+    }
 }

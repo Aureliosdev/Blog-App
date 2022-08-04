@@ -58,11 +58,9 @@ final class DataBaseManager {
                 guard let data = snapshot?.data() as? [String : String],
                       let name = data["name"],
                         error == nil else { return }
-                var url: URL?
-                if let urlString = data["profile_photo"] {
-                  url = URL(string: urlString)
-                }
-               let user = User(name: name, email: email, profilePictureURL: url)
+                
+            let ref = data["profile_photo"]
+                let user = User(name: name, email: email, profilePictureRef: ref)
                 completion(user)
             }
     }

@@ -64,7 +64,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource,UITableView
     
     
     private func  fetchProfileData() {
-        
+        DataBaseManager.shared.getUser(email: currentEmail) { [weak self] user in
+            guard let user = user  else  { return }
+        }
         
     }
     private func setUpTableHeader(profilePhotoURL: URL? = nil,name: String? = nil) {

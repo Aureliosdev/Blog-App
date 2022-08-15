@@ -119,7 +119,7 @@ class SignUpViewController: UITabBarController {
             if  success  {
                 // update database
                 let newUser = User(name: name, email: email, profilePictureRef: nil)
-                DataBaseManager.shared.insert(user: newUser) { inserted in
+                DataBaseManager.shared.insert(user: newUser, email: email) { inserted in
                     guard inserted else { return }
                     UserDefaults.standard.set(email, forKey: "email")
                     UserDefaults.standard.set(name, forKey: "name")

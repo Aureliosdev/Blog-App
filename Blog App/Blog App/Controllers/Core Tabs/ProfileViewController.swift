@@ -42,6 +42,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource,UITableView
         view.backgroundColor = .systemBackground
         setUpTableHeader()
         setUpTable()
+        fetchPosts()
         title = "Profile"
         
     }
@@ -165,13 +166,20 @@ class ProfileViewController: UIViewController, UITableViewDataSource,UITableView
     private var posts: [BlogPost] = []
     
     private func fetchPosts() {
-        
+        print("fetching posts...")
+        DataBaseManager.shared.getPosts(for: currentEmail) { [weak self] posts in
+            self?.posts = posts
+            print("Found \(posts.count) posts")
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
     }
     //Table View
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Title"
+        cell.textLabel?.text = post.title
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

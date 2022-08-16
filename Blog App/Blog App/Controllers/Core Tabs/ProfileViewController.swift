@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource,UITableView
     }
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(PostPreviewTableViewCell.self, forCellReuseIdentifier: PostPreviewTableViewCell.identifier)
         return tableView
         
     }()
@@ -78,7 +78,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource,UITableView
    
     private func setUpTableHeader(profilePhotoRef: String? = nil,name: String? = nil) {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: view.width))
-        headerView.backgroundColor = .systemBlue
+        headerView.backgroundColor = .systemTeal
         headerView.isUserInteractionEnabled = true
         tableView.tableHeaderView = headerView
         tableView.clipsToBounds = true
@@ -87,6 +87,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource,UITableView
         let profilePhoto = UIImageView(image: UIImage(systemName: "person.circle"))
         profilePhoto.tintColor = .white
         profilePhoto.contentMode = .scaleAspectFit
+        
         
         profilePhoto.frame = CGRect(x: (view.width-(view.width/4))/2,
                                     y: (headerView.height-(view.width/6))/2.5,
@@ -178,10 +179,18 @@ class ProfileViewController: UIViewController, UITableViewDataSource,UITableView
     //Table View
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = post.title
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostPreviewTableViewCell.identifier, for: indexPath) as?
+                PostPreviewTableViewCell else  {
+        fatalError("Error occured")  }
+        
+        cell.configure(with: .init(title: post.title, imageUrl:post.HeaderImageURL))
+
         return cell
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = ViewPostViewController()

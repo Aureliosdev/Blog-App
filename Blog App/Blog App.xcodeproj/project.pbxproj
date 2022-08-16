@@ -30,6 +30,8 @@
 		D3344472287083EA00EBA31A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3344471287083EA00EBA31A /* AuthManager.swift */; };
 		D33444742870840E00EBA31A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33444732870840E00EBA31A /* StorageManager.swift */; };
 		D33CF7CE28806D6A00411DBF /* PayWallDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33CF7CD28806D6A00411DBF /* PayWallDescriptionView.swift */; };
+		D33E7E4C28AAADC20055E014 /* PostPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33E7E4B28AAADC20055E014 /* PostPreviewTableViewCell.swift */; };
+		D33E7E4E28AAB0220055E014 /* PostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33E7E4D28AAB0220055E014 /* PostHeaderTableViewCell.swift */; };
 		D3A4B421287BE86A009CB3C6 /* PayWallHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4B420287BE86A009CB3C6 /* PayWallHeaderView.swift */; };
 		D3A4B423287BEE0C009CB3C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4B422287BEE0C009CB3C6 /* Extensions.swift */; };
 		D3DCC7D72871732E002CCD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3DCC7D62871732E002CCD3C /* GoogleService-Info.plist */; };
@@ -63,6 +65,8 @@
 		D3344471287083EA00EBA31A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		D33444732870840E00EBA31A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		D33CF7CD28806D6A00411DBF /* PayWallDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallDescriptionView.swift; sourceTree = "<group>"; };
+		D33E7E4B28AAADC20055E014 /* PostPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreviewTableViewCell.swift; sourceTree = "<group>"; };
+		D33E7E4D28AAB0220055E014 /* PostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		D3A4B420287BE86A009CB3C6 /* PayWallHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayWallHeaderView.swift; sourceTree = "<group>"; };
 		D3A4B422287BEE0C009CB3C6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D3DCC7D62871732E002CCD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -212,10 +216,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D33E7E4A28AAAD610055E014 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D33E7E4B28AAADC20055E014 /* PostPreviewTableViewCell.swift */,
+				D33E7E4D28AAB0220055E014 /* PostHeaderTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D3A4B41F287BE85C009CB3C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D3A4B420287BE86A009CB3C6 /* PayWallHeaderView.swift */,
+				D33E7E4A28AAAD610055E014 /* Cells */,
 				D328E58A2889396300C48E23 /* SignInHeaderView.swift */,
 				D33444562870638600EBA31A /* LaunchScreen.storyboard */,
 			);
@@ -346,6 +360,7 @@
 				D33444742870840E00EBA31A /* StorageManager.swift in Sources */,
 				D334444C2870638500EBA31A /* AppDelegate.swift in Sources */,
 				D3184C0428735636009F046B /* User.swift in Sources */,
+				D33E7E4C28AAADC20055E014 /* PostPreviewTableViewCell.swift in Sources */,
 				D3A4B421287BE86A009CB3C6 /* PayWallHeaderView.swift in Sources */,
 				D301CAC328773596004E4688 /* SignUpViewController.swift in Sources */,
 				D3344470287083D200EBA31A /* DataBaseManager.swift in Sources */,
@@ -359,6 +374,7 @@
 				D334444E2870638500EBA31A /* SceneDelegate.swift in Sources */,
 				D334446E287083BB00EBA31A /* IAPManager.swift in Sources */,
 				D301CAD028773972004E4688 /* PayWallViewController.swift in Sources */,
+				D33E7E4E28AAB0220055E014 /* PostHeaderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

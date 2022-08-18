@@ -7,8 +7,17 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    
+    private let tableView: UITableView = {
+     let tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        return tableView
+    }()
+    
+    
     private let composeButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
@@ -25,7 +34,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         view.addSubview(composeButton)
+        view.addSubview(tableView)
         composeButton.addTarget(self, action: #selector(didTapCreate), for: .touchUpInside)
+        tableView.delegate = self
+        tableView.dataSource = self
+        fetchPosts()
     }
     
     
@@ -43,6 +56,43 @@ class HomeViewController: UIViewController {
                                      width: 60,
                                      height: 60)
         
+        tableView.frame = view.bounds
     }
 
+    private var posts: [BlogPost] = []
+    
+    private func fetchPosts() {
+        DataBaseManager.shared.getAllPosts { [weak self] posts in
+            self?.posts = posts
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = posts[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostPreviewTableViewCell.identifier, for: indexPath) as?
+                PostPreviewTableViewCell else  {
+        fatalError("Error occured")  }
+        
+        cell.configure(with: .init(title: post.title, imageUrl:post.HeaderImageURL))
+
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = ViewPostViewController(post: posts[indexPath.row])
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.title = "Post"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
 }

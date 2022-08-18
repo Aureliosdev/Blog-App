@@ -43,6 +43,7 @@ class CreateNewPostViewController: UITabBarController {
         text.isEditable = true
         text.font = .systemFont(ofSize: 28, weight: .medium)
         text.backgroundColor = .systemBackground
+
         return text
     }()
     
@@ -65,8 +66,8 @@ class CreateNewPostViewController: UITabBarController {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        titleField.frame = CGRect(x: 10, y: view.safeAreaInsets.top, width: view.width-20, height: 50)
-        headerImageView.frame = CGRect(x: 0, y: titleField.bottom+5, width: view.width, height: 160)
+        titleField.frame = CGRect(x: 10, y: view.safeAreaInsets.top-20, width: view.width-20, height: 50)
+        headerImageView.frame = CGRect(x: 10, y: titleField.bottom+5, width: view.width-20, height: 160)
         textView.frame = CGRect(x: 10, y: headerImageView.bottom+10, width: view.width-20, height: view.height-210-view.safeAreaInsets.top)
     }
     

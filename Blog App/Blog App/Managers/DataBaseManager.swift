@@ -39,7 +39,28 @@ final class DataBaseManager {
             }
      
     public func getAllPosts(completion: @escaping ([BlogPost]) -> Void) {
-         
+        //Get all users
+        //From each user , get posts
+        database
+        
+            .collection("users")
+            .getDocuments {  [weak self] snapshot, error in
+                guard let documents = snapshot?.documents.compactMap( {$0.data()}), error == nil else { return }
+                let emails: [String] = documents.compactMap({ return $0["email"] as? String })
+                guard !emails.isEmpty else  {
+                    completion([])
+                    return }
+                let group = DispatchGroup()
+                var result: [BlogPost] = [] 
+                for email in emails {
+                    group.enter()
+                    self?.getPosts(for: email) { userPosts in
+                        defer {
+                            group.leave()
+                        }
+                    }
+                }
+            }
     }
     public func getPosts(for email: String,completion: @escaping ([BlogPost]) -> Void) {
         let userEmail = email

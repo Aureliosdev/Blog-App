@@ -19,8 +19,6 @@ class PostPreviewTableViewCellViewModel {
     
     }
 }
-
-
 class PostPreviewTableViewCell: UITableViewCell {
 
     static let identifier =  "PostPreviewTableViewCell"
